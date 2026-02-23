@@ -11,9 +11,9 @@ const inviteData = [
         title: "Let's Invite Family" 
     },
     { 
-        id: "party-mike", 
-        videoUrl: "https://www.w3schools.com/html/movie.mp4", 
-        title: "Mike's Birthday Bash" 
+        id: "himanshu", 
+        videoUrl: "https://drive.google.com/file/d/1_U4-GTM_WPU8R26sgv1CcfStp_gYbK6Z/view?usp=sharing", 
+        title: "Chopta Tour Vedio" 
     }
 ];
 
@@ -51,4 +51,3 @@ app.get('/v/:id', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/invitefamily.tech`);
 });
-
