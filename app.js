@@ -49,5 +49,6 @@ app.get('/v/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
+    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/invitefamily.tech`);
 });
+
