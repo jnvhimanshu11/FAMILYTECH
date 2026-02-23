@@ -12,7 +12,7 @@ const inviteData = [
     },
     { 
         id: "himanshu", 
-        videoUrl: "https://drive.google.com/file/d/1_U4-GTM_WPU8R26sgv1CcfStp_gYbK6Z/view?usp=sharing", 
+        videoUrl: "https://res.cloudinary.com/dwdfpcck1/video/upload/v1771881234/WhatsApp_Video_2026-02-24_at_2.26.08_AM_1_foz3da.mp4", 
         title: "Chopta Tour Vedio" 
     }
 ];
@@ -49,5 +49,5 @@ app.get('/v/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/invitefamily.tech`);
+    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
 });
