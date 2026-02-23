@@ -8,7 +8,7 @@ const inviteData = [
     { 
         id: "invitefamily.tech", 
         videoUrl: "https://res.cloudinary.com/dwdfpcck1/video/upload/v1771873038/WhatsApp_Video_2026-02-24_at_12.26.42_AM_ghto3p.mp4", 
-        title: "Himanshu and Rachna Wedding" 
+        title: "Let's Invite Family" 
     },
     { 
         id: "party-mike", 
@@ -51,3 +51,4 @@ app.get('/v/:id', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/invitefamily.tech`);
 });
+
