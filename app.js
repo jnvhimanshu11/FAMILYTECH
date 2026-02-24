@@ -143,17 +143,32 @@ app.get('/v/:id', (req, res) => {
         </video>
     </div>
 
-    <p>Tap the video to play audio 🔊</p>
+    <!--- <p> Tap the video to play audio 🔊 </p> --->
 
 </body>
 </html>
         `);
     } else {
-        // ... (Your existing 404 code is fine, kept for brevity)
-        res.status(404).send(`<h1>Invite Not Found</h1>`);
+        
+        res.status(404).send
+            
+            <body>
+
+        <div class="error-container">
+
+            <h1>Sorry! You Are Not Invited</h1>
+            <p>This exclusive content is for invited guests only.</p>
+            <span class="emoji">😔</span>
+
+        </div>
+    </body>
+    </html>
+            
+    
     }
 });
 
 app.listen(PORT, () => {
     console.log(`Server running on: http://localhost:${PORT}/v/prachi`);
 });
+
