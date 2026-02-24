@@ -96,7 +96,7 @@ app.get('/v/:id', (req, res) => {
         .video-card::after {
             content: '';
             position: absolute;
-            inset: 4px; /* Thickness of the border */
+            inset: 8px; /* Thickness of the border */
             background: #111;
             border-radius: 26px;
             z-index: -1;
@@ -310,6 +310,7 @@ app.listen(PORT, () => {
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/prachi`);
 
 });
+
 
 
 
