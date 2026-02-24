@@ -119,7 +119,70 @@ app.get('/v/:id', (req, res) => {
 
         `);
     } else {
-        res.status(404).send("<h1>Invitation Not Found</h1>");
+        res.status(404).send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                /* Matches your main theme's dynamic background */
+                background: radial-gradient(circle at top, #2c3e50 0%, #000000 100%);
+                color: white;
+                font-family: "Kristen ITC", "Fredoka", sans-serif;
+                
+                /* Centering Logic */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            .error-container {
+                padding: 20px;
+                border-radius: 25px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                box-shadow: 0px 20px 40px rgba(0,0,0,0.5);
+                max-width: 80%;
+            }
+
+            h1 {
+                /* Matching the gold gradient from your invite title */
+                background: linear-gradient(180deg, #f1c40f 0%, #e67e22 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.2rem;
+                margin: 0;
+                filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+            }
+
+            p {
+                color: #bdc3c7;
+                margin-top: 15px;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="error-container">
+            <h1>Sorry! You Are Not Invited</h1>
+            <p>This exclusive content is for invited guests only.</p>
+             
+
+    
+            <span class="emoji">😔</span>
+
+        
+        </div>
+    </body>
+    </html>
+`);
     }
 });
 
