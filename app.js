@@ -114,7 +114,7 @@ app.get('/v/:id', (req, res) => {
         </video>
     </div>
 
-    <p>Tap the screen to play audio</p>
+
 
   
     
@@ -195,3 +195,4 @@ app.get('/v/:id', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
 });
+
