@@ -79,8 +79,12 @@ app.get('/v/:id', (req, res) => {
             width: 200%;
             height: 200%;
             background: conic-gradient(
-                transparent, 
-                #f1c40f, 
+                 transparent, 
+                #f1c40f,
+                 #0be92cff,
+                 #06efc8ff,
+                 #4c00fcff,
+                 #f1c40f,
                 #e67e22, 
                 transparent 30%
             );
@@ -306,6 +310,7 @@ app.listen(PORT, () => {
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/prachi`);
 
 });
+
 
 
 
