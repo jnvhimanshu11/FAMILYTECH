@@ -3,7 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // This acts like your "Menu" or Database. 
-// You can add as many as you want here!
+// You can add as many vedios as you want here!
+
 const inviteData = [
     { 
         id: "invitefamily.tech", 
@@ -23,25 +24,99 @@ app.get('/v/:id', (req, res) => {
     const invite = inviteData.find(item => item.id === uniqueId);
 
     if (invite) {
+
+
         // This is what the user sees on their phone after scanning
+
+
         res.send(`
-            <html>
-                <head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <style>
-                        body { background: #1a1a1a; color: white; text-align: center; font-family: Arial; padding: 20px; }
-                        video { width: 100%; border-radius: 15px; box-shadow: 0px 0px 20px rgba(255,255,255,0.2); }
-                        h1 { color: #f1c40f; margin-top: 20px; }
-                    </style>
-                </head>
-                <body>
-                    <h1>${invite.title}</h1>
-                    <video controls autoplay muted>
-                        <source src="${invite.videoUrl}" type="video/mp4">
-                    </video>
-                    <p>Tap the screen to play audio</p>
-                </body>
-            </html>
+            
+          
+            
+            <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body { 
+            /* Dynamic Background: Deep radial gradient for depth */
+            background: radial-gradient(circle at top, #2c3e50 0%, #000000 100%); 
+            color: white; 
+            text-align: center; 
+            /* Kristen ITC primary with Fredoka fallback for mobile/web compatibility */
+            font-family: "Kristen ITC", "Fredoka", "Comic Sans MS", sans-serif; 
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { 
+            /* Gradient Font Style */
+            background: linear-gradient(180deg, #f1c40f 0%, #e67e22 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+            letter-spacing: 1px;
+        }
+
+        /* Polished Video Card */
+        .video-card {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.05); /* Slight glass look */
+            padding: 12px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 20px 40px rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        video { 
+            width: 100%; 
+            border-radius: 18px; 
+            display: block;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 10px;
+        
+        
+        }
+    </style>
+</head>
+<body>
+
+    <h1>${invite.title}</h1>
+
+    <div class="video-card">
+        <video controls autoplay muted playsinline>
+            <source src="${invite.videoUrl}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p>Tap the screen to play audio</p>
+
+  
+    
+</body>
+</html>
+
+
+
         `);
     } else {
         res.status(404).send("<h1>Invitation Not Found</h1>");
@@ -49,6 +124,5 @@ app.get('/v/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/invitefamily.tech`);
+    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
 });
-
