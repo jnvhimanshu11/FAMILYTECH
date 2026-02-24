@@ -16,6 +16,12 @@ const inviteData = [
         videoUrl: "https://res.cloudinary.com/dwdfpcck1/video/upload/v1771881234/WhatsApp_Video_2026-02-24_at_2.26.08_AM_1_foz3da.mp4", 
         title: "Chopta Tour Vedio" 
     }
+    ,
+    { 
+        id: "prachi", 
+        videoUrl: "https://res.cloudinary.com/dwdfpcck1/video/upload/v1771913995/WhatsApp_Video_2026-02-24_at_11.46.02_AM_qy5bl4.mp4", 
+        title: "Prachi & Gaurav" 
+    }
 ];
 
 // This is the logic that reads the unique URL
