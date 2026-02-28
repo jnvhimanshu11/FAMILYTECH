@@ -15,10 +15,15 @@ const inviteData = [
     },
     { 
         id: "prachi", 
+        // Note :- Client Vedio //
         videoUrl: "https://res.cloudinary.com/dwdfpcck1/video/upload/v1771913995/WhatsApp_Video_2026-02-24_at_11.46.02_AM_qy5bl4.mp4", 
         title: "Prachi & Gaurav" 
     }
 ];
+
+app.get('/ping', (req, res) => {
+  res.status(200).send('Server is alive ✅');
+});
 
 app.get('/v/:id', (req, res) => {
     const uniqueId = req.params.id;
@@ -79,7 +84,7 @@ app.get('/v/:id', (req, res) => {
             width: 200%;
             height: 200%;
             background: conic-gradient(
-                 transparent, 
+                transparent, 
                 #f1c40f,
                  #0be92cff,
                  #06efc8ff,
@@ -147,11 +152,11 @@ app.get('/v/:id', (req, res) => {
         </video>
     </div>
 
-    <!--- <p> Tap the video to play audio 🔊 </p> --->
+
+         <!--- <p> Tap the video to play audio 🔊 </p> --->
 
 
-
-
+    
 
 
 
@@ -275,15 +280,11 @@ app.get('/v/:id', (req, res) => {
 
         <div class="error-container">
 
-            <h1>Sorry! You Are Not Invited</h1>
+            <h1>Sorry! You fefwefwefewAre Not Invited</h1>
 
             <p>This exclusive content is for invited guests only.</p>
 
-             
-
-
-
-   
+            
 
             <span class="emoji">😔</span>
 
@@ -305,15 +306,14 @@ app.get('/v/:id', (req, res) => {
 
 
 
+
+// Testing on local host
+
 app.listen(PORT, () => {
 
-    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/prachi`);
+    console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
 
 });
-
-
-
-
 
 
 
