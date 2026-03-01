@@ -1,5 +1,4 @@
 const express = require('express');
-const axios = require('axios'); // 1. Add this (make sure to run 'npm install axios')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -321,17 +320,17 @@ app.listen(PORT, () => {
 
 // 3. The Keep-Alive Function
 function keepAlive() {
-    // IMPORTANT: Replace the URL below with your REAL Render URL
     const url = `https://thebohothread.in/ping`; 
     
     setInterval(async () => {
         try {
-            await axios.get(url);
-            console.log('Keep-alive ping sent to:', url);
+            // Fetch is built into Node.js, no 'axios' needed!
+            await fetch(url);
+            console.log('Keep-alive ping sent 🚀');
         } catch (err) {
-            console.error('Keep-alive failed:', err.message);
+            console.error('Ping failed:', err.message);
         }
-    }, 840000); // 14 minutes (Render sleeps at 15)
+    }, 840000); // 14 minutes
 }
 
 
