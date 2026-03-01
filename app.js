@@ -282,8 +282,8 @@ app.get('/v/:id', (req, res) => {
 
         <div class="error-container">
 
-            <h1>Sorry! You fefwefwefewAre Not Invited</h1>
-
+  <h1>Sorry! You Your Are Not Invited</h1>
+  
             <p>This exclusive content is for invited guests only.</p>
 
             
@@ -332,5 +332,6 @@ function keepAlive() {
         }
     }, 840000); // 14 minutes
 }
+
 
 
