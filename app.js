@@ -1,4 +1,5 @@
 const express = require('express');
+const axios = require('axios'); // 1. Add this (make sure to run 'npm install axios')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -31,6 +32,8 @@ app.get('/v/:id', (req, res) => {
 
     if (invite) {
         res.send(`
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -310,10 +313,25 @@ app.get('/v/:id', (req, res) => {
 // Testing on local host
 
 app.listen(PORT, () => {
-
     console.log(`Your server is alive! Go to: http://localhost:${PORT}/v/himanshu`);
 
+    // 2. Start the Keep-Alive logic
+    keepAlive();
 });
 
+// 3. The Keep-Alive Function
+function keepAlive() {
+    // IMPORTANT: Replace the URL below with your REAL Render URL
+    const url = `https://thebohothread.in/ping`; 
+    
+    setInterval(async () => {
+        try {
+            await axios.get(url);
+            console.log('Keep-alive ping sent to:', url);
+        } catch (err) {
+            console.error('Keep-alive failed:', err.message);
+        }
+    }, 840000); // 14 minutes (Render sleeps at 15)
+}
 
 
